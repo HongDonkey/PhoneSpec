@@ -32,8 +32,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
 	//230908 mybatis, mysql 설정 추가
-	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
-	runtimeOnly 'mysql:mysql-connector-java:8.0.25'
+	//implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+	//runtimeOnly 'mysql:mysql-connector-java:8.0.25'
 }
 
 tasks.named('test') {
