@@ -1,4 +1,4 @@
-import "./src/App.css";
+import "./App.css";
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
@@ -6,7 +6,7 @@ function App() {
     const [msg, setMsg] = useState([]);
     useEffect(() => {
       axios.get("/main")
-          .then((res) => {return res.json();})
+          .then((res) => setMsg(res.data))
           .then((data) => {setMsg(data);})
     }, []);
     return (
