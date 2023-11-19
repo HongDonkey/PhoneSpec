@@ -13,11 +13,11 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequiredArgsConstructor
 public class AppleController {
-	private final AppleService appleService = null;
+	private final AppleService appleService;
 	
-	@GetMapping("/iphone")
-	public List<AppleDeviceDto> phone(){
-		return appleService.getPhone();
+	@GetMapping("/allIPhone")
+	public List<AppleDeviceDto> getAllIPhone(){		
+		return appleService.getAllIPhone();
 	}
-	
+
 }

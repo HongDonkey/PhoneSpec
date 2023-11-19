@@ -7,9 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.com.PhoneSpec.IPhone.dto.AppleDeviceDto;
 
-@Mapper
-@Repository
 
+@Repository
+@Mapper
 public interface AppleDeviceMapper {
-	List<AppleDeviceDto> getPhone();
+	List<AppleDeviceDto> getAllIPhone();
 }

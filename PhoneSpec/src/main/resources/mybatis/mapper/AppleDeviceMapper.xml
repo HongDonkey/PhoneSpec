@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.com.PhoneSpec.IPhone.dao.AppleDeviceMapper">
-  <select id="getUserList" resultType="com.com.PhoneSpec.IPhone.dto.AppleDeviceDto">
-    SELECT * FROM APPLE_DEVICE;
+  <select id="getAllIPhone" resultType="com.com.PhoneSpec.IPhone.dto.AppleDeviceDto">
+    SELECT * FROM APPLE_DEVICE
   </select>
 </mapper>

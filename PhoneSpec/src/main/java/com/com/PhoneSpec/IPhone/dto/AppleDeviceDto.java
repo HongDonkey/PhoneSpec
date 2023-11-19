@@ -39,4 +39,7 @@ public class AppleDeviceDto {
 	private String sim; //SIM카드
 	private String connector; // 커넥터
 
+	
+	
+	
 }
