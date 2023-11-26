@@ -15,9 +15,15 @@ import lombok.RequiredArgsConstructor;
 public class AppleServiceImpl implements AppleService{
 	private final AppleDeviceMapper Apple;
 	
-	@Override
+
 	public List<AppleDeviceDto> getAllIPhone(){
 		return Apple.getAllIPhone();
 	}
+	
+	@Override
+	public List<AppleDeviceDto> getRecentIPhone(){
+		return Apple.getRecentIPhone();
+	}
+	
 	
 }

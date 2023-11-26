@@ -5,4 +5,10 @@
   <select id="getAllIPhone" resultType="com.com.PhoneSpec.IPhone.dto.AppleDeviceDto">
     SELECT * FROM APPLE_DEVICE
   </select>
+  
+  <select id="getRecentIPhone" resultType="com.com.PhoneSpec.IPhone.dto.AppleDeviceDto">
+    select * from APPLE_DEVICE
+	ORDER BY SEQ DESC
+	LIMIT 3;
+  </select>
 </mapper>

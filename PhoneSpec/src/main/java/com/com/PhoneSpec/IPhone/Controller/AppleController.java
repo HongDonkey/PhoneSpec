@@ -19,5 +19,10 @@ public class AppleController {
 	public List<AppleDeviceDto> getAllIPhone(){		
 		return appleService.getAllIPhone();
 	}
+	
+	@GetMapping("/recentIPhone")
+	public List<AppleDeviceDto> getRecentIPhone(){		
+		return appleService.getRecentIPhone();
+	}
 
 }

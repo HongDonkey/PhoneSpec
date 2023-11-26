@@ -12,4 +12,5 @@ import com.com.PhoneSpec.IPhone.dto.AppleDeviceDto;
 @Mapper
 public interface AppleDeviceMapper {
 	List<AppleDeviceDto> getAllIPhone();
+	List<AppleDeviceDto> getRecentIPhone();
 }
