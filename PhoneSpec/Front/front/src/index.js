@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  //콘솔에 2번씩 찍히는 거 방지하기 위해 React.StrictMode 주석
   // <React.StrictMode>
     <App />
   // </React.StrictMode>

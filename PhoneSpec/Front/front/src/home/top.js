@@ -1,5 +1,12 @@
 import bootstrap from "../css/bootstrap.min.css"
 import css from "../css/style.css"
+import Login from "./login"
+
+function loginPage(){
+    window.location.href = "./login"
+    return Login
+}
+
 function Navbar() {
     return(
 <div>
@@ -60,7 +67,7 @@ function Navbar() {
                                 </div>
                                 <a href="contact.html" className="nav-item nav-link">Contact</a>
                             </div>
-                            <a href="/" className="btn btn-primary px-3 d-none d-lg-flex">Add Property</a>
+                            <button onClick={loginPage} className="btn btn-primary px-3 d-none d-lg-flex">Login</button>
                         </div>
                     </nav>
         
