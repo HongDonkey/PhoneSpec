@@ -1,11 +1,7 @@
 import bootstrap from "../css/bootstrap.min.css"
 import css from "../css/style.css"
-import Login from "./login"
+import {Link} from "react-router-dom";
 
-function loginPage(){
-    window.location.href = "./login"
-    return Login
-}
 
 function Navbar() {
     return(
@@ -41,14 +37,16 @@ function Navbar() {
                             <div className="icon p-2 me-2">
                                 <img className="img-fluid; width: 30px; height: 30px;" src={process.env.PUBLIC_URL + "img/mainimg.png"} alt="Icon" />
                             </div>
+                            <Link to="/">
                             <h1 className="m-0 text-primary">PhoneSpec</h1>
+                            </Link>
                         </a>
                         <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarCollapse">
                             <div className="navbar-nav ms-auto">
-                                <a href="index.html" className="nav-item nav-link">Home</a>
+                                <a href="/" className="nav-item nav-link">Home</a>
                                 <a href="about.html" class="nav-item nav-link">About</a>
                                 <div className="nav-item dropdown">
                                     <a href="/" className="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Property</a>
@@ -67,7 +65,9 @@ function Navbar() {
                                 </div>
                                 <a href="contact.html" className="nav-item nav-link">Contact</a>
                             </div>
-                            <button onClick={loginPage} className="btn btn-primary px-3 d-none d-lg-flex">Login</button>
+                            <Link to ="/login">
+                            <button className="btn btn-primary px-3 d-none d-lg-flex">Login</button>
+                            </Link>
                         </div>
                     </nav>
         
@@ -75,11 +75,15 @@ function Navbar() {
     )
 }
 function App() {
+
     return(
-        <Navbar></Navbar>    
+    <div>
+        <Navbar></Navbar>
+    </div>   
+
     )
     // <!-- Navbar End --> 
     
 }
 
-export default App;
+export default App

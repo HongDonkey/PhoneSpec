@@ -1,16 +1,14 @@
-import Top from "./top";
+import "../css/login.css"
 
 function App() {
-    
   return (
     <div>
-        <Top></Top>
-      <div class="container">
+      <div className="container">
         {/* <!-- Heading --> */}
         <h1>SIGN IN</h1>
 
-        {/* <!-- Links --> */}
-        <ul class="links">
+        {/* <!-- Links -->
+        <ul className="links">
           <li>
             <a href="#" id="signin">
               SIGN IN
@@ -28,76 +26,56 @@ function App() {
           </li>
         </ul>
 
-        {/* <!-- Form --> */}
+        {/* <!-- Form --> }
         <form action="" method="post">
-          {/* <!-- email input --> */}
-          <div class="first-input input__block first-input__block">
-            <input type="email" placeholder="Email" class="input" id="email" />
+          {/* <!-- email input --> 
+          <div className="first-input input__block first-input__block">
+            <input type="email" placeholder="Email" className="input" id="email" />
           </div>
-          {/* <!-- password input --> */}
-          <div class="input__block">
+          {/* <!-- password input --> 
+          <div className="input__block">
             <input
               type="password"
               placeholder="Password"
-              class="input"
+              className="input"
               id="password"
             />
           </div>
-          {/* <!-- repeat password input --> */}
-          <div class="input__block">
+          {/* <!-- repeat password input --> 
+          <div className="input__block">
             <input
               type="password"
               placeholder="Repeat password"
-              class="input repeat__password"
+              className="input repeat__password"
               id="repeat__password"
             />
           </div>
-          {/* <!-- sign in button --> */}
-          <button class="signin__btn">Sign in</button>
+          {/* <!-- sign in button --> 
+          <button className="signin__btn">Sign in</button>
         </form>
-        {/* <!-- separator --> */}
-        <div class="separator">
+        {/* <!-- separator --> 
+        <div className="separator">
           <p>OR</p>
-        </div>
+        </div> */}
+       
         {/* <!-- google button --> */}
-        <button class="google__btn">
-          <i class="fa fa-google"></i>
+        <button className="google__btn">
+          <i className="fa fa-google"></i>
           Sign in with Google
         </button>
-        {/* <!-- google button --> */}
-        <button class="github__btn">
-          <i class="fa fa-github"></i>
-          Sign in with GitHub
+        {/* <!-- naver button --> */}
+        <button className="github__btn">
+          <i className="fa fa-github"></i>
+          Sign in with Naver
+        </button>
+        {/* <!-- kakao button --> */}
+        <button className="loginbtn">
+          <i className="fa fa-google" src={process.env.PUBLIC_URL + "img/loginbtn/kakao_login_large_wide.png"} alt="Icon" ></i>
+          Sign in with Kakao
         </button>
       </div>
-
-      <footer>
-        <p>
-          Thank you for watching
-          <i class="fa fa-heart"></i>
-          <i class="fa fa-heart"></i>
-          <i class="fa fa-heart"></i>
-        </p>
-        <p>
-          Chouaib Blgn :
-          <a href="https://www.facebook.com/chouaib45">
-            <i class="fa fa-facebook"></i>
-          </a>
-          <a href="http://twitter.com/chouaibblgn45">
-            <i class="fa fa-twitter"></i>
-          </a>
-          <a href="http://instagram.com/chouaib_blgn">
-            <i class="fa fa-instagram"></i>
-          </a>
-          <a href="http://linkedin.com/in/chouaibblgn/">
-            <i class="fa fa-linkedin"></i>
-          </a>
-          <a href="https://www.behance.net/geek30">
-            <i class="fa fa-behance"></i>
-          </a>
-        </p>
-      </footer>
     </div>
+    // <img className="img-fluid; width: 30px; height: 30px;" src={process.env.PUBLIC_URL + "img/mainimg.png"} alt="Icon" />
   );
   // <!-- Navbar End -->
 }
