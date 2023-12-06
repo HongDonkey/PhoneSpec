@@ -1,4 +1,23 @@
 import "../css/login.css"
+import {Link} from "react-router-dom";
+
+// 각각의 펑션을 컴포넌트로 만들어서 진행
+
+
+function GoogleLogin(){
+  console.log("구글 로그인")
+  
+}
+function NaverLogin(){
+  console.log("네이버 로그인")
+  // https://nid.naver.com/oauth2.0/authorize
+}
+
+function KakaoLogin(){
+  console.log("카카오 로그인")
+}
+
+
 
 function App() {
   return (
@@ -59,19 +78,24 @@ function App() {
         </div> */}
        
         {/* <!-- google button --> */}
-        <button className="google__btn">
-          <i className="fa fa-google"></i>
-          Sign in with Google
+        <button type="button" className="loginbtn" onClick={GoogleLogin}>
+          <img className="sns-icon" src={process.env.PUBLIC_URL + "img/loginbtn/web_light_sq_SI@4x.png"} alt="Icon" />
+          {/* <button type="button" class="btm_image" id="img_btn"><img  src="이미지경로"></button>*/}
         </button>
         {/* <!-- naver button --> */}
-        <button className="github__btn">
-          <i className="fa fa-github"></i>
-          Sign in with Naver
+
+        <button type="button" className="loginbtn" onClick={NaverLogin}>
+        <Link to="https://nid.naver.com/oauth2.0/authorize">
+          <img className="sns-icon" src={process.env.PUBLIC_URL + "img/loginbtn/naver_btnG_official.png"} alt="Icon" />
+        
+          {/* <button type="button" class="btm_image" id="img_btn"><img  src="이미지경로"></button>*/}
+        </Link>
         </button>
+
         {/* <!-- kakao button --> */}
-        <button className="loginbtn">
-          <i className="fa fa-google" src={process.env.PUBLIC_URL + "img/loginbtn/kakao_login_large_wide.png"} alt="Icon" ></i>
-          Sign in with Kakao
+        <button type="button" className="loginbtn" onClick={KakaoLogin}>
+          <img className="sns-icon" src={process.env.PUBLIC_URL + "img/loginbtn/kakao_login_large_wide.png"} alt="Icon" />
+          {/* <button type="button" class="btm_image" id="img_btn"><img  src="이미지경로"></button>*/}
         </button>
       </div>
     </div>
