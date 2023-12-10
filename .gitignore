@@ -1,2 +1,3 @@
 *.sql
 /.metadata/
+/PhonseSpec/Front/front/.env

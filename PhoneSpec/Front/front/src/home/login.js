@@ -1,8 +1,11 @@
 import "../css/login.css"
 import {Link} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 // 각각의 펑션을 컴포넌트로 만들어서 진행
 
+const { naver } = window;
 
 function GoogleLogin(){
   console.log("구글 로그인")
@@ -10,7 +13,18 @@ function GoogleLogin(){
 }
 function NaverLogin(){
   console.log("네이버 로그인")
-  // https://nid.naver.com/oauth2.0/authorize
+  const initializeNaverLogin  = () => {
+    const naverLogin = new naver.LoginWithNaverId({
+    clientId: process.env.NAVER_CLIENT_ID,
+    callbackUrl: process.env.NAVER_CALLBACK_URL,
+    clientSecret: process.env.NAVER_CLIENT_SECRET
+  });
+  naverLogin.init();
+}
+
+useEffect(() => {
+  initializeNaverLogin();
+}, []);
 }
 
 function KakaoLogin(){
