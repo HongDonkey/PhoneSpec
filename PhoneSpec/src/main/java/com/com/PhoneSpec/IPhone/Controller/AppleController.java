@@ -24,5 +24,7 @@ public class AppleController {
 	public List<AppleDeviceDto> getRecentIPhone(){		
 		return appleService.getRecentIPhone();
 	}
+	
+
 
 }

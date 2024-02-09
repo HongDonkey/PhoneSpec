@@ -22,6 +22,7 @@ repositories {
 }
 
 dependencies {
+
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.1'
@@ -37,7 +38,14 @@ dependencies {
 	implementation 'com.mysql:mysql-connector-j'
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	
+	// naver login
+	implementation 'com.navercorp.nid:oauth-jdk8:5.6.0' // jdk 8
+	// jsp connect
+	//implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+  	//implementation 'javax.servlet:jstl'
+
 }
+
 bootRun {
    jvmArgs '-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005'
 }
