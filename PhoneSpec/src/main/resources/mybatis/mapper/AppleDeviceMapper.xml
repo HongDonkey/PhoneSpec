@@ -7,7 +7,8 @@
   </select>
   
   <select id="getRecentIPhone" resultType="com.com.PhoneSpec.IPhone.dto.AppleDeviceDto">
-    select * from APPLE_DEVICE
+    <!-- 20240212 제품이름만 사용하니까 리소스 줄이기 위해 변경 -->
+    select productnm from APPLE_DEVICE
 	ORDER BY SEQ DESC
 	LIMIT 3;
   </select>

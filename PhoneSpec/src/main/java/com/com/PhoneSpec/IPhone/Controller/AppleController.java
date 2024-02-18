@@ -16,13 +16,15 @@ public class AppleController {
 	private final AppleService appleService;
 	
 	@GetMapping("/allIPhone")
-	public List<AppleDeviceDto> getAllIPhone(){		
-		return appleService.getAllIPhone();
+	public List<AppleDeviceDto> getAllIPhone(){	
+		List<AppleDeviceDto> allIPhone = appleService.getAllIPhone();
+		return allIPhone;
 	}
 	
 	@GetMapping("/recentIPhone")
-	public List<AppleDeviceDto> getRecentIPhone(){		
-		return appleService.getRecentIPhone();
+	public List<AppleDeviceDto> getRecentIPhone(){	
+		List<AppleDeviceDto> recentIPhone = appleService.getRecentIPhone();
+		return recentIPhone;
 	}
 	
 

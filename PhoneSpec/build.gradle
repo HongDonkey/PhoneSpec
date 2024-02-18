@@ -23,8 +23,13 @@ repositories {
 
 dependencies {
 
+	// Spring Security 추가
+	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// Scribe OpenSource OAuth Java Library를 적용
+	implementation 'com.github.scribejava:scribejava-core:2.8.1'
+	//implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.1'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -36,13 +41,16 @@ dependencies {
 	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:2.3.1'
 	implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
 	implementation 'com.mysql:mysql-connector-j'
-	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+	//jsonparser
+	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
 	
 	// naver login
 	implementation 'com.navercorp.nid:oauth-jdk8:5.6.0' // jdk 8
 	// jsp connect
 	//implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
   	//implementation 'javax.servlet:jstl'
+	
 
 }
 
@@ -53,3 +61,5 @@ bootRun {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+

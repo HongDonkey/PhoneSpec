@@ -13,12 +13,10 @@ public class StartController {
 		
 		return "/main/main";
 	}
-	
-	@RequestMapping(value = "/1", method = RequestMethod.GET)
-	public String top(){		
-		
-		return "/common/top";
-	}
-	
 
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String login(){		
+		
+		return "/main/login";
+	}
 }
